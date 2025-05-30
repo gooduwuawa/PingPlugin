@@ -1,0 +1,7 @@
+name: PingPlugin
+version: 1.0
+main: com.ping.PingPlugin
+api-version: 1.20
+commands:
+  ping:
+    description: 顯示你的 Ping
