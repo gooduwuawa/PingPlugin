@@ -12,13 +12,13 @@ public class PingPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         this.getCommand("ping").setExecutor(this);
-        getLogger().info("PingPlugin 已啟動！");
+        getLogger().info("PingPlugin Enabled!");
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(ChatColor.RED + "這個指令只能由玩家執行。");
+            sender.sendMessage(ChatColor.RED + "This command can only be executed by the player.");
             return true;
         }
 
@@ -32,7 +32,7 @@ public class PingPlugin extends JavaPlugin {
         } else {
             Player target = Bukkit.getPlayerExact(args[0]);
             if (target == null || !target.isOnline()) {
-                player.sendMessage(ChatColor.RED + "找不到玩家 " + args[0]);
+                player.sendMessage(ChatColor.RED + "Player not found " + args[0]);
                 return true;
             }
 
@@ -46,16 +46,16 @@ public class PingPlugin extends JavaPlugin {
     }
 
     private int getPing(Player player) {
-        return player.getPing(); // ✅ 使用官方 API，無需反射
+        return player.getPing();
     }
 
     private String getPingColor(int ping) {
         if (ping <= 120) {
-            return "&a"; // 綠色
+            return "&a";
         } else if (ping <= 180) {
-            return "&e"; // 黃色
+            return "&e";
         } else {
-            return "&c"; // 紅色
+            return "&c";
         }
     }
 }
