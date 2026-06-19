@@ -6,12 +6,12 @@ softdepend: [PlaceholderAPI]
 
 commands:
   ping:
-    description: 查看延遲
+    description: Show your ping
   setping:
-    description: 設定隨機延遲範圍
+    description: Set random ping
     permission: ping.admin
 
 permissions:
   ping.admin:
-    description: 管理員權限
+    description: Admin Permissions
     default: op
