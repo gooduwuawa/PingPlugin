@@ -1,0 +1,17 @@
+name: PingPlugin
+version: 1.0
+main: com.ping.PingPlugin
+api-version: 1.20
+softdepend: [PlaceholderAPI] # 重要：確保在 PAPI 之後載入
+
+commands:
+  ping:
+    description: 查看延遲
+  setping:
+    description: 設定隨機延遲範圍
+    permission: ping.admin
+
+permissions:
+  ping.admin:
+    description: 管理員權限
+    default: op
