@@ -2,7 +2,7 @@ name: PingPlugin
 version: 1.0
 main: com.ping.PingPlugin
 api-version: 1.20
-softdepend: [PlaceholderAPI] # 重要：確保在 PAPI 之後載入
+softdepend: [PlaceholderAPI]
 
 commands:
   ping:
